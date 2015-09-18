@@ -3,12 +3,11 @@ class LovesController < ApplicationController
     @love = Love.new
   end
 
-
   def index
-
+    @love
   end
 
   def create
-
+    @calculate = @love.calculate(params[:])
   end
 end
