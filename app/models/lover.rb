@@ -1,4 +1,4 @@
-class Love
+class Lover
   def calculate(fname, sname)
     response = Unirest.get("https://love-calculator.p.mashape.com/getPercentage",
       headers:{"X-Mashape-Key" => "73HmZJg1KTmshvQgUyg2e6yOE7fHp1S3aLdjsnYNzIYmzGEDSS",

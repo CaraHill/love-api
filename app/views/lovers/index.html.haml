@@ -3,7 +3,7 @@
   %p Enter the name of your love as well as your own. We'll let you know if you're a match and, if so, generate a message just for your special someone!
 
   .calculate-form
-    = simple_form_for @love do |f|
+    = simple_form_for @lover do |f|
       = f.input :love_name, label: 'Your love\'s name'
       = f.input :your_name, label: 'Your name'
       = f.submit
