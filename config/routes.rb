@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'love#index'
+  root 'loves#index'
+
+  resources :loves, only: [:index, :create, :new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
