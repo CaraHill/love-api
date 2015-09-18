@@ -6,4 +6,9 @@ class Love
       parameters:{fname: fname, sname: sname})
     return response.body
   end
+
+  def sentiment(to, from)
+    response = Unirest.get("http://loveaas.com/everyone/LoveMaster/crush/#{to}/#{from}")
+    return response.body
+  end
 end
