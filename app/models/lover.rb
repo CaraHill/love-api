@@ -8,7 +8,7 @@ class Lover
   end
 
   def sentiment(to, from)
-    response = Unirest.get("http://loveaas.com/everyone/LoveMaster/crush/#{to}/#{from}")
+    response = Unirest.get("http://loveaas.com/crush/#{to}/#{from}")
     return response.body
   end
 end

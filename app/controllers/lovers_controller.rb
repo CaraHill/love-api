@@ -4,12 +4,15 @@ class LoversController < ApplicationController
   end
 
   def index
-    @lover
+
   end
 
   def create
-    @calculate = @lover.calculate(params[fname: love_name, sname: your_name])
-    @sentiment = @lover.sentiment(params[to: love_name, from: your_name])
-    redirect_to :new
+    lover_name = params[:love_name]
+    your_name = params[:your_name]
+    @calculate = @lover.calculate(lover_name, your_name)
+    @sentiment = @lover.sentiment(lover_name, your_name)
+    render :new
   end
+
 end
