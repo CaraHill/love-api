@@ -1,7 +1,18 @@
 .container
-  = @calculate["sname"]
-  %p , you love
+  You love
+  .love-name
     = @calculate["fname"]
-  %p and your love percentage is
-    = @calulate[]
-  = raw @sentiment
+  and your love percentage is
+  .love-percentage
+    = @calculate["percentage"]
+  %br
+  The Love Calculator has determined that you
+  .love-result
+    = @calculate["result"]
+  %br
+  .sentiment
+    - if @calculate["percentage"].to_i >= 60
+      Congratulations! Here is your message for your love:
+      = raw @sentiment
+    - else
+      Sorry, you are not a match. Better luck next time!
