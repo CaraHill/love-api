@@ -6,13 +6,16 @@
   .love-percentage
     = @calculate["percentage"]
   %br
-  The Love Calculator has determined that you
+  The Love Calculator has determined:
   .love-result
     = @calculate["result"]
   %br
   .sentiment
-    - if @calculate["percentage"].to_i >= 60
+    - if @calculate["percentage"].to_i >= 50
       Congratulations! Here is your message for your love:
       = raw @sentiment
     - else
       Sorry, you are not a match. Better luck next time!
+
+      %br
+      = link_to 'Try again?', root_path
